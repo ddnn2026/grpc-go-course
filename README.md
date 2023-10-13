@@ -1,7 +1,6 @@
-# grpc-go-course
-run calculator
-make calculator
-# run server:
+# run calculator
+* make calculator
+* run server:
 ./bin/calculator/server
-# run client:
+* run client:
 ./bin/calculator/client
