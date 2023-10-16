@@ -17,7 +17,7 @@ func doPrimes(c pb.CalculatorServiceClient) {
 
 	stream, err := c.Primes(context.Background(), req)
 	if err != nil {
-		log.Fatal("error while calling Primes: %v\n", err)
+		log.Fatalf("error while calling Primes: %v\n", err)
 	}
 	for {
 		res, err := stream.Recv()
@@ -26,7 +26,7 @@ func doPrimes(c pb.CalculatorServiceClient) {
 		}
 
 		if err != nil {
-			log.Fatal("error while reading stream: %v\n", err)
+			log.Fatalf("error while reading stream: %v\n", err)
 		}
 
 		log.Printf("Primes: %d\n", res.Result)

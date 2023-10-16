@@ -7,7 +7,7 @@ import (
 )
 
 func (s *Server) Primes(in *pb.PrimeRequest, stream pb.CalculatorService_PrimesServer) error {
-	log.Printf("primes function was invoked &v\n", in)
+	log.Println("primes function was invoked &v\n", in)
 	number := in.Number
 	divisor := int64(2)
 
